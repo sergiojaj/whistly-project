@@ -1,0 +1,80 @@
+{% extends '_base.html' %} 
+{% load crispy_forms_tags %} 
+{% block title %}Whistly - Search{% endblock title %} 
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-12" align="center">
+      <h3 class="mb-3"><i class="fa fa-file-o"></i> Whistly - Search Results</h3>
+      <p class="">Please find bellow the result of your search</p>
+      <p class="mb-3">or start a new search...</p>
+      <form action="{% url 'search_results' %}" method="GET">
+        <input
+          type="text"
+          name="q"
+          class="form-control"
+          placeholder="eg.: bird species... location... photographer"
+          style="max-width: 600px;"
+        >
+        <button class="btn btn-info" type="button" style="width: auto; height:auto">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+            
+      {% if user_search %}
+        <p>Showing all results matching <strong>{{user_search}}</strong></p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="row mb-3">
+
+    <div class="container col-12" align=center>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Order by:
+      </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <!-- one can build own search criteria and the name order_by serves as a dict new key -->
+          <a class="dropdown-item" href="?q={{ request.GET.q }}&order_by=comment">Most comments</a>
+          <a class="dropdown-item" href="?q={{ request.GET.q }}&order_by=seed">Most seeds</a>
+          <a class="dropdown-item" href="?q={{ request.GET.q }}&order_by=species">Species a-z</a>
+          <a class="dropdown-item" href="?q={{ request.GET.q }}&order_by=photographer">Photographer a-z</a>
+        </div>
+   </div>
+
+  </div>
+
+   <!-- search starts here -->
+      {% for result in bird_list %}
+        <div class="container">
+          <!-- comments start -->
+          <div class="media mt-3 p-3">
+            <a href="{{ result.get_absolute_url }}">
+              <img class="mr-3 img-thumbnail" src="{{ result.picture.url }}" alt="Generic placeholder image" style="height: 150px; width: 200px;">
+            </a>
+            <div class="media-body">
+              <p class="small float-right">Photographer: {{ result.photographer|capfirst }}</p>
+              <h5 class="mt-0">Species: {{ result.species }}
+                <span class="ml-2">
+                  <i class="fas fa-seedling"></i> 
+                  {{ result.seeds.count }}
+                </span>
+              </h5>
+              {{ result.photographer_comment }}
+            </div>
+          </div>
+          </div>
+      {% endfor %}
+      <!-- search ends here -->
+
+
+</div>
+<!-- main row ends here -->
+</div>
+
+{% include 'pagination.html' %}
+
+{% endblock content %}

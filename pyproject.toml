@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "whistly"
+version = "0.1.0"
+description = "A Django app for bird photography sharing."
+authors = ["sergiojaj <sergiojaj@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = ">=3.0.7"                    # Core framework
+dj-database-url = ">=0.5.0"           # Database URL parsing
+django-crispy-forms = ">=1.9.1"       # Form rendering
+crispy-bootstrap4 = "^2024.10"        # Bootstrap4 integration for crispy-forms
+django-allauth = ">=0.42.0"           # User authentication and social login
+django-debug-toolbar = ">=2.0"        # Debugging toolbar (dev only)
+django-storages = ">=1.9.1"           # Storage backend (e.g., S3)
+whitenoise = "^6.8.2"                 # Serving static files in production
+django-environ = "^0.11.2"            # Environment variable handling
+django-anymail = "^12.0"              # Mailgun email backend
+gunicorn = ">=20.0.4"                 # Production WSGI server
+psycopg2-binary = ">=2.8.4"           # PostgreSQL database adapter
+pillow = ">=7.1.2"                    # Image processing for uploads
+faker = ">=4.1.1"                     # Fake data generator for testing
+python3-openid = ">=3.2.0"            # Required by django-allauth
+pytz = ">=2020.1"                     # Timezone support for Django
+sqlparse = ">=0.3.1"                  # SQL parsing for Django ORM
+django-extensions = "^3.2.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest-django = "^4.5.2"              # Pytest support for Django testing
+black = "^24.3.0"                     # Code formatting
+isort = "^5.12.0"                     # Import sorting
+flake8 = "^6.1.0"                     # Linter for Python code
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

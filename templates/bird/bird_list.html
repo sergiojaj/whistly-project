@@ -1,0 +1,39 @@
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Bird's Nest{% endblock title %}
+
+{% block content %}
+
+<div class="container" align=center>
+
+    <h3>Check out our most recent contributions</h3>
+    
+    <hr class="mb-4">
+
+<!-- birds list starts here -->
+    <div class="row">
+        {% for bird in birds_list %}
+            <div class="col-sm-6 col-md-6 col-lg-4 p-3">
+                    <a href="{{ bird.get_absolute_url }}">
+                        <img class="bird_thumbnail" src="{{ bird.picture.url }}" alt="{{ bird.species }}" >
+                    </a>
+                <div class="caption mt-2">
+                    <h3>Species: {{bird.species}}</h3>
+                    <a href="{% url 'profile_detail' pk=bird.photographer.pk %}">
+                        <p>Photographer: {{bird.photographer|capfirst}}</p>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+<!-- birds list ends here -->
+
+<!-- pagination start -->
+{% include 'pagination.html' %}
+<!-- pagination end -->
+
+</div>
+</div>
+
+
+{% endblock content %}

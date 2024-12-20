@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Feathers UP{% endblock title %}
+
+{% block content %}
+
+<!-- <div class="container mb-4" align=center style="width: 400px;"> -->
+    
+<div class="form-group container forms" align=center>
+
+    <form method="POST" enctype="multipart/form-data">
+        <h3>Enter details bellow</h3>
+        <p>Make sure to add as much details as possible.</p>
+        {% csrf_token %}
+        {{ form.species|as_crispy_field }}
+        {{ form.location|as_crispy_field }}
+        {{ form.picture }}
+        {{ form.photographer_comment|as_crispy_field }}
+        <button type="submit" class="btn btn-primary">Hatch Egg</button>
+    </form>
+</div>
+<!-- </div> -->
+
+{% endblock content %}

@@ -1,0 +1,11 @@
+.git
+db.sqlite3
+server.log
+__pycache__
+*.pyc
+.env
+.venv
+.pytest_cache
+.vscode
+.idea
+Dockerfile.populator

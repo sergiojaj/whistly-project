@@ -1,0 +1,213 @@
+/* general */
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Caladea', serif;
+  /* background: url("/static/img/background_2.jpg"); */
+  /* background-size: cover;  */
+  /* color: white; */
+  position: relative
+}
+
+.into_text{
+  text-shadow: 2px 2px 3px gainsboro;
+}
+
+.tips-text {
+  text-shadow: 2px 2px 3px gainsboro;
+}
+
+.icon_nav{
+  width: 30px;
+  height: 30px;
+  
+}
+
+
+/* for debug */
+/* * { border: 1px solid red; } */
+
+button{
+  width: 200px;
+  height: 60px;
+  
+}
+
+.btn_navbar {
+  width: 60px; 
+  height: 35px
+}
+
+/*              base                 */
+#base_h1{
+  font-size: 50px;
+}
+#base_h6{
+  font-size: 20px;
+}
+
+/* home */
+.home_text {
+  text-align: center;
+  text-shadow: 2px 2px 3px gainsboro;
+}
+ 
+.jumbo{
+  margin-top: 15px;
+}
+
+/*              home           */
+
+.home_page_imgs{
+  width:  100%;
+  height: auto;
+  max-width: 400px;
+  max-height: 200px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+  
+}
+.home_page_top_img{
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+  border-radius: 10%;
+}
+
+
+
+/*                profile detail                 */
+.profile_picture {
+  height: 100px; 
+  width: auto;
+  background-color: cornsilk;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+.profile_card {
+  width: 300px;
+}
+
+.profile_info{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.profile_btn{
+  width: 100px;
+  
+  font-size: 15px;
+}
+
+.profile_birds{
+  width: 240px;
+  height: 182px;
+}
+
+.slide_image{
+  width: 300px;
+  height: 600px;
+}
+
+.profile_pictures {
+  height: 200px; 
+  width: auto;
+  background-color: cornsilk;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
+/*                 remove account           */
+.remove_account_form{
+  display: inline;
+  margin-right: 5px;
+}
+
+/* bird's nest */
+
+.bird_thumbnail{
+  height: 250px; 
+  width: 330px;
+  max-width: 100%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+  0 2px 2px rgba(0,0,0,0.12), 
+  0 4px 4px rgba(0,0,0,0.12), 
+  0 8px 8px rgba(0,0,0,0.12),
+  0 16px 16px rgba(0,0,0,0.12);
+  background: linear-gradient(45deg,#efefef 25%,transparent 0,transparent 75%,#efefef 0,#efefef),linear-gradient(45deg,#efefef 25%,transparent 0,transparent 75%,#efefef 0,#efefef);
+}
+
+/*               bird_details                  */
+
+.bird_detail_btn{
+  width: 70px;
+  margin-top: 20px;
+  
+  margin-bottom: 30px;
+}
+
+.rotate_btn {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  margin-right: 20px;
+
+}
+
+.bird_detail_info{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.bird_detail_img_container{
+  max-height: 800px;
+}
+
+/* test */
+
+
+.bird_detail_image {
+  display: block;
+  margin: auto;
+  height: auto;
+  max-height: 600px;
+  width: auto;
+  max-width: 100%;
+  box-shadow: 0 1px 3px rgba(0,0,30,.3);
+  background: linear-gradient(45deg,#efefef 25%,transparent 0,transparent 75%,#efefef 0,#efefef),linear-gradient(45deg,#efefef 25%,transparent 0,transparent 75%,#efefef 0,#efefef);
+}
+
+/* comments */
+.comment_picture_size{
+    width: 64px;
+    height: 64px;
+  }
+  
+.comment_box_btn{
+  width: auto;
+  height: auto;
+
+}
+
+/* all django forms */
+.forms {
+  max-width: 500px;
+}
+#forms_id {
+  display: inline;
+}
+
+.remove_account_btns{
+  width: auto;
+}
