@@ -95,29 +95,16 @@ TEMPLATES = [
 WSGI_APPLICATION = "whistly.wsgi.application"
 
 # Database Configuration
-if ENVIRONMENT == "production":
-    # Production PostgreSQL Configuration
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": env("POSTGRES_DB", default="postgres"),
-            "USER": env("POSTGRES_USER", default="postgres"),
-            "PASSWORD": env("POSTGRES_PASSWORD", default="postgres"),
-            "HOST": env("POSTGRES_HOST", default="localhost"),
-            "PORT": env("POSTGRES_PORT", default="5432"),
-        }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": env("POSTGRES_DB", default="postgres"),
+        "USER": env("POSTGRES_USER", default="postgres"),
+        "PASSWORD": env("POSTGRES_PASSWORD", default="postgres"),
+        "HOST": env("POSTGRES_HOST", default="localhost"),
+        "PORT": env("POSTGRES_PORT", default="5432"),
     }
-else:  # Development PostgreSQL Configuration
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": env("POSTGRES_DB_DEV", default="whistly_dev"),
-            "USER": env("POSTGRES_USER_DEV", default="postgres"),
-            "PASSWORD": env("POSTGRES_PASSWORD_DEV", default="postgres"),
-            "HOST": env("POSTGRES_HOST_DEV", default="localhost"),
-            "PORT": env("POSTGRES_PORT_DEV", default="5432"),
-        }
-    }
+}
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "whistly"
+name = "whistly-project"
 version = "0.1.0"
 description = "A Django app for bird photography sharing."
 authors = ["sergiojaj <sergiojaj@gmail.com>"]

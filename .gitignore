@@ -1,33 +1,49 @@
-readme.txt
-docker-compose.yml
-docker-compose.yml
-static/img/background5.jpg
-static/img/background6.jpg
-docker-compose.prod.yml
-media/bird/cover1_3anOjjF.jpg
-media/bird/cover1_C9nVwp0.jpg
-media/bird/cover1.jpg
-media/bird/cover2.jpg
-media/bird/jan-meeus-7LsuYqkvIUM-unsplash.jpg
-media/bird/kevin-mueller-aeNg4YA41P8-unsplash.jpg
-media/bird/zdenek-machacek-Vu4-Il_2Kdo-unsplash.jpg
-media/bird/andrew-pons-lylCw4zcA7I-unsplash.jpg
-media/bird/andrew-pons-lylCw4zcA7I-unsplash_P9tERLw_X1Fir1L_98pBWoc.jpg
-media/bird/andrew-pons-lylCw4zcA7I-unsplash_P9tERLw_X1Fir1L.jpg
-media/bird/andrew-pons-lylCw4zcA7I-unsplash_P9tERLw.jpg
-media/bird/bird_one.jpg
-media/bird/bird1_gjatF19.jfif
-media/bird/bird1_lLj1Lsd.jfif
-media/bird/cover1_KY3yiPn.jpg
-media/bird/cover1_yMkt4Zk.jpg
-media/bird/cover2_2TMcqks.jpg
-media/bird/kevin-mueller-aeNg4YA41P8-unsplash_gfswrFF.jpg
-media/bird/kevin-mueller-aeNg4YA41P8-unsplash_GyB5HHS.jpg
-media/bird/kevin-mueller-aeNg4YA41P8-unsplash_Pj9chzN.jpg
-media/bird/zdenek-machacek-Vu4-Il_2Kdo-unsplash_E4qR46H.jpg
-media/bird/zdenek-machacek-Vu4-Il_2Kdo-unsplash_jfTDj5S.jpg
-media/bird/zdenek-machacek-Vu4-Il_2Kdo-unsplash_UF6K3SR.jpg
-media/bird/zdenek-machacek-Vu4-Il_2Kdo-unsplash_zKvptwV.jpg
-media/bird/andrew-pons-lylCw4zcA7I-unsplash_TusMIIL_G1LnnRB.jpg
-media/bird/andrew-pons-lylCw4zcA7I-unsplash_TusMIIL.jpg
+# Specific
 server.log
+.env
+
+# General Python
+*.pyc
+*.pyo
+__pycache__/
+*.so
+
+# Virtual Environment
+.venv/
+env/
+venv/
+ENV/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.coverage
+htmlcov/
+.tox/
+.nox/
+pytest_cache/
+.cache/
+
+# Secrets
+.env
+.env.*
+
+# Docs
+docs/_build/
